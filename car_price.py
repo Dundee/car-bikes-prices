@@ -7,15 +7,25 @@ import statistics
 import requests
 
 CARS = {
-    'skoda octavia': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=93&model=705&nocache=535',
-    'vw golf': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=103&model=759&nocache=862',
-    'vw passat': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=103&model=762&nocache=862',
-    'bmw 3': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=5&model=39&nocache=317',
-    'bmw 5': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=5&model=40&nocache=317',
-    'ford mondeo': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=24&model=190&nocache=627',
-    'ford focus': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=24&model=197&nocache=627',
-    'volvo v40': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=106&model=790&nocache=982',
-    'volvo v60': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=106&model=5779&nocache=204',
+    'Skoda Octavia': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=93&model=705&nocache=535',
+    'Skoda Superb': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=93&model=708&nocache=535',
+    'Skoda Fabia': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=93&model=707&nocache=535',
+    'VW Golf': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=103&model=759&nocache=862',
+    'VW Passat': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=103&model=762&nocache=862',
+    'BMW 3': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=5&model=39&nocache=317',
+    'Ford Mondeo': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=24&model=190&nocache=627',
+    'Ford Focus': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=24&model=197&nocache=627',
+    'Volvo v40': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=106&model=790&nocache=982',
+    'Volvo v60': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=106&model=5779&nocache=204',
+    'Citroen C4 Picasso': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=13&model=1323&nocache=204',
+    'Honda Civic': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=28&model=226&nocache=204',
+    'Hyundai i30': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=31&model=1376&nocache=204',
+    'Peugeot 308': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=70&model=1416&nocache=204',
+    'Renault Megane': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=78&model=612&nocache=204',
+    'Seat Leon': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=86&model=668&nocache=204',
+    'Subaru Forester': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=88&model=679&nocache=204',
+    'Toyota Avensis': 'https://www.sauto.cz/hledani?ajax=2&page={}&condition=4&condition=2&condition=1&category=1&manufacturer=99&model=736&nocache=204',
+
 }
 
 
